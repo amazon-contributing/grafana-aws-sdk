@@ -1,28 +1,11 @@
-# Grafana AWS SDK
+# Grafana AWS SDK - Contributing Fork
 
-This is a common package that can be used for all amazon plugins.
+This is a fork of [grafana/grafana-aws-sdk](https://github.com/grafana/grafana-aws-sdk). While most of our contributions are done from personal forks, this repository was created as a space to contribute back as a team.
 
-## Backend plugins (go sdk)
+## Active Branches
 
-see the ./pkg folder
+Actively maintained branches in this repository must have corresponding pull requests upstream and documented below. If not accepted, document that as a reason for maintaining the unmerged patch. This is an OSPO requirement. Read more [here](https://t.corp.amazon.com/a0e8f2e4-782c-4904-ad49-cbee6ebe7afa/communication#e9a108ed-2652-489c-85ce-07b87f9c62ef).
 
-## Frontend configuration
-
-Frontend code has been moved to https://github.com/grafana/grafana-aws-sdk-react
-
-## Drone configuration
-
-Drone signs the Drone configuration file. This needs to be run every time the drone.yml file is modified. See https://github.com/grafana/deployment_tools/blob/master/docs/infrastructure/drone/signing.md for more info.
-
-### Update drone build
-
-If you have not installed drone CLI follow [these instructions](https://docs.drone.io/cli/install/)
-
-To sign the `.drone.yml` file:
-
-```bash
-# Get your drone token from https://drone.grafana.net/account
-export DRONE_TOKEN=<Your DRONE_TOKEN>
-
-mage drone
-```
+| Active Branches                                                                                                       | Associated Pull Requests                                           |
+| ----------------------------------------------------------------------------------------------------------------------| ------------------------------------------------------------------ |
+| [v0.23.1-amg-DO-NOT-DELETE](https://github.com/amazon-contributing/grafana-aws-sdk/tree/v0.23.1-amg-DO-NOT-DELETE)    | https://github.com/grafana/grafana-aws-sdk/pull/250                |
