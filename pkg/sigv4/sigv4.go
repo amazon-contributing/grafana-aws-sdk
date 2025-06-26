@@ -212,6 +212,9 @@ func createSigner(cfg *Config, verboseMode bool) (*v4.Signer, error) {
 	}
 	assumeRoleRegion := aws.String(cfg.Region)
 	if awsds.IsOptInRegion(cfg.Region) {
+        // AMG: Currently the auth middleware for Prometheus doesn’t support assuming role to opt-in regions, so we query from non-opt-in region.
+        // This will be superseded by proper opt-in regions support for prometheus in a later version.
+        // https://github.com/grafana/grafana/issues/107199
 		assumeRoleRegion = aws.String("us-east-1")
 	}
 
