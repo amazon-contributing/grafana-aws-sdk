@@ -79,11 +79,12 @@ type SessionConfig struct {
 	AuthSettings  *AuthSettings
 }
 
-func isOptInRegion(region string) bool {
+func IsOptInRegion(region string) bool {
 	// Opt-in region from https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions
 	regions := map[string]bool{
 		"af-south-1":     true,
 		"ap-east-1":      true,
+		"ap-east-2":      true,
 		"ap-south-2":     true,
 		"ap-southeast-3": true,
 		"ap-southeast-4": true,
@@ -168,7 +169,7 @@ func (sc *SessionCache) GetSession(c SessionConfig) (*session.Session, error) {
 		c.Settings.Region = ""
 	}
 	if c.Settings.Region != "" {
-		if c.Settings.AssumeRoleARN != "" && c.AuthSettings.AssumeRoleEnabled && isOptInRegion(c.Settings.Region) {
+		if c.Settings.AssumeRoleARN != "" && c.AuthSettings.AssumeRoleEnabled && IsOptInRegion(c.Settings.Region) {
 			// When assuming a role, the real region is set later in a new session
 			// so we use a well-known region here (not opt-in) to obtain valid credentials
 			regionCfg = &aws.Config{Region: aws.String("us-east-1")}
