@@ -8,4 +8,4 @@ Actively maintained branches in this repository must have corresponding pull req
 
 | Active Branches                                                                                                       | Associated Pull Requests                                           |
 | ----------------------------------------------------------------------------------------------------------------------| ------------------------------------------------------------------ |
-| [v0.23.1-amg-DO-NOT-DELETE](https://github.com/amazon-contributing/grafana-aws-sdk/tree/v0.23.1-amg-DO-NOT-DELETE)    | https://github.com/grafana/grafana-aws-sdk/pull/250                |
+| [v0.23.1-amg-DO-NOT-DELETE](https://github.com/amazon-contributing/grafana-aws-sdk/tree/v0.23.1-amg-DO-NOT-DELETE)    | https://github.com/grafana/grafana-aws-sdk/pull/250, https://github.com/grafana/grafana-aws-sdk/pull/355 |
